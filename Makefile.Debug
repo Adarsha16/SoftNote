@@ -1545,32 +1545,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../../Qt/6.6.0/mingw_64/include/QtCore/QtDebug \
 		../../../../Qt/6.6.0/mingw_64/include/QtCore/QFileInfo \
 		ui_mainwindow.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QGroupBox \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qgroupbox.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLabel \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qpicture.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextformat.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextoption.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QMenuBar \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmenubar.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmenu.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QStatusBar \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \
 		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
 		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h \
 		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qdialog.h \
@@ -1927,26 +1901,9 @@ debug/signin.o: signin.cpp signin.h \
 		../../../../Qt/6.6.0/mingw_64/include/QtCore/QtDebug \
 		../../../../Qt/6.6.0/mingw_64/include/QtCore/QFileInfo \
 		ui_signin.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLabel \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qpicture.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextformat.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtGui/qtextoption.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
-		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h
+		../../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		../../../../Qt/6.6.0/mingw_64/include/QtGui/QPixmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\signin.o signin.cpp
 
 debug/qrc_resorce.o: debug/qrc_resorce.cpp 

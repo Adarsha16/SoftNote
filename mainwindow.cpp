@@ -12,9 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     QDir::setCurrent(QCoreApplication::applicationDirPath());
 
     ui->setupUi(this);
+
+    setWindowTitle("Welcome to SoftNote!");
 
     QPixmap pix (":/images/Header.png");
     ui->Pic->setPixmap(pix);
