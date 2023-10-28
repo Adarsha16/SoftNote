@@ -13,9 +13,10 @@ SignIn::SignIn(QWidget *parent) :
 {
     QDir::setCurrent(QCoreApplication::applicationDirPath());
 
-
-
     ui->setupUi(this);
+
+    setWindowTitle("Log In to SoftNote");
+
     QPixmap pix (":/images/logIn.png");
     ui->labelPic->setPixmap(pix);
 
