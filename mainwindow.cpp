@@ -92,7 +92,7 @@ void MainWindow::on_onSubmit_clicked()
         }
         else if(count==0) {
 
-            query.prepare("INSERT INTO userData(id, Username, Password, Email) VALUES (:id, :Username, :Password, :Email)");
+            query.prepare("INSERT INTO userData(Username, Password, Email) VALUES (:Username, :Password, :Email)");
             query.bindValue(":Username", Username);
             query.bindValue(":Password", Password);
             query.bindValue(":Email", Email);
