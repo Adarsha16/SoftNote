@@ -26,7 +26,7 @@ public:
     QLabel *labelPic;
     QPushButton *signIn;
     QLabel *labelPass;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLineEdit *sUsername;
     QLineEdit *sPassword;
@@ -54,19 +54,19 @@ public:
         labelPass->setObjectName("labelPass");
         labelPass->setGeometry(QRect(82, 191, 16, 22));
         labelPass->setFont(font1);
-        widget = new QWidget(SignIn);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(80, 200, 191, 64));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(SignIn);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(80, 183, 221, 81));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        sUsername = new QLineEdit(widget);
+        sUsername = new QLineEdit(layoutWidget);
         sUsername->setObjectName("sUsername");
         sUsername->setFont(font);
 
         verticalLayout->addWidget(sUsername);
 
-        sPassword = new QLineEdit(widget);
+        sPassword = new QLineEdit(layoutWidget);
         sPassword->setObjectName("sPassword");
         sPassword->setFont(font);
         sPassword->setEchoMode(QLineEdit::Password);

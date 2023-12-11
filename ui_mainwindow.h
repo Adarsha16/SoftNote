@@ -30,7 +30,7 @@ public:
     QFrame *SignUp;
     QLabel *Pic;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLineEdit *getUsername;
     QLineEdit *getEmail;
@@ -64,13 +64,13 @@ public:
         font1.setPointSize(16);
         font1.setItalic(true);
         label->setFont(font1);
-        widget = new QWidget(SignUp);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(80, 270, 191, 141));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(SignUp);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(80, 250, 251, 161));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        getUsername = new QLineEdit(widget);
+        getUsername = new QLineEdit(layoutWidget);
         getUsername->setObjectName("getUsername");
         QFont font2;
         font2.setPointSize(16);
@@ -78,20 +78,20 @@ public:
 
         verticalLayout->addWidget(getUsername);
 
-        getEmail = new QLineEdit(widget);
+        getEmail = new QLineEdit(layoutWidget);
         getEmail->setObjectName("getEmail");
         getEmail->setFont(font2);
 
         verticalLayout->addWidget(getEmail);
 
-        getPass = new QLineEdit(widget);
+        getPass = new QLineEdit(layoutWidget);
         getPass->setObjectName("getPass");
         getPass->setFont(font2);
         getPass->setEchoMode(QLineEdit::Password);
 
         verticalLayout->addWidget(getPass);
 
-        getRePass = new QLineEdit(widget);
+        getRePass = new QLineEdit(layoutWidget);
         getRePass->setObjectName("getRePass");
         getRePass->setFont(font2);
         getRePass->setEchoMode(QLineEdit::Password);
