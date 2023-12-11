@@ -38,7 +38,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>320</y>
+     <y>290</y>
      <width>91</width>
      <height>41</height>
     </rect>
@@ -51,27 +51,6 @@
    </property>
    <property name="text">
     <string>Log In</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="sPassword">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>260</y>
-     <width>171</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
    </property>
   </widget>
   <widget class="QLabel" name="labelPass">
@@ -93,23 +72,44 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="sUsername">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>80</x>
      <y>200</y>
-     <width>171</width>
-     <height>41</height>
+     <width>191</width>
+     <height>64</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>16</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="sUsername">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="sPassword">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

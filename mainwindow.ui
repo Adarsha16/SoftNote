@@ -41,143 +41,116 @@
       <string/>
      </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>300</y>
-       <width>271</width>
-       <height>110</height>
+       <x>81</x>
+       <y>496</y>
+       <width>31</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>OR</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>270</y>
+       <width>191</width>
+       <height>141</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="Username">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Username     </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="getUsername"/>
-        </item>
-       </layout>
+       <widget class="QLineEdit" name="getUsername">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLabel" name="Email">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Email             </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="getEmail"/>
-        </item>
-       </layout>
+       <widget class="QLineEdit" name="getEmail">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+       </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QLabel" name="Password">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Password      </string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="getPass">
-          <property name="echoMode">
-           <enum>QLineEdit::Password</enum>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QLineEdit" name="getPass">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="QLabel" name="Re_pass">
-          <property name="font">
-           <font>
-            <pointsize>16</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Re-Password</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="getRePass">
-          <property name="echoMode">
-           <enum>QLineEdit::Password</enum>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QLineEdit" name="getRePass">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QPushButton" name="signIn">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>480</y>
-       <width>352</width>
-       <height>38</height>
+       <x>80</x>
+       <y>530</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <widget class="QPushButton" name="onSubmit">
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Create a new account</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="signIn">
-        <property name="font">
-         <font>
-          <pointsize>16</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Log In</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Log-in to SoftNote</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="onSubmit">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>450</y>
+       <width>241</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Create a new account</string>
+     </property>
     </widget>
    </widget>
   </widget>
