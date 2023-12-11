@@ -6,6 +6,9 @@
 #include <QSqlQuery>
 #include "signin.h"
 #include <QPixmap>
+#include <QCoreApplication>
+#include <QRegularExpression>
+#include <QDebug>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -64,8 +67,9 @@ void MainWindow::on_onSubmit_clicked()
                    "Password TEXT, "
                    "Email TEXT)");
 
-        if (uLength < 6) {
-            QMessageBox::information(this, "Invalid Username!", "Username can't be less than 6 characters");
+
+        if (uLength < 2) {
+            QMessageBox::information(this, "Invalid Username!", "Username can't be less than 2 characters");
         }
         if (!query.exec("SELECT * FROM userData")) {
             qDebug() << "Query error: " << query.lastError().text();
@@ -76,12 +80,14 @@ void MainWindow::on_onSubmit_clicked()
                 count++;
             }
         }
+        QRegularExpression regex("^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$");
+        QRegularExpressionMatch match = regex.match(Email);
         if(count > 0)
         {
             QMessageBox::information(this, "Username collision!", "Username already exists");
         }
-        else if (!(Email.contains('@') && Email.contains('.'))) {
-            QMessageBox::information(this, "Invalid Email!", "Email must contain '@' and '.'");
+        else if (!match.hasMatch()) {
+            QMessageBox::information(this, "Invalid Email!", "Please input an valid email address");
         }
         else if(pLength < 8)
         {

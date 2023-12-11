@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="SignUp">
+   <widget class="QFrame" name="SignUp">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -22,9 +22,6 @@
       <width>761</width>
       <height>591</height>
      </rect>
-    </property>
-    <property name="title">
-     <string/>
     </property>
     <widget class="QLabel" name="Pic">
      <property name="geometry">
@@ -44,13 +41,13 @@
       <string/>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>30</x>
        <y>300</y>
-       <width>244</width>
-       <height>140</height>
+       <width>271</width>
+       <height>110</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -144,7 +141,7 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -190,7 +187,7 @@
      <x>0</x>
      <y>0</y>
      <width>966</width>
-     <height>21</height>
+     <height>17</height>
     </rect>
    </property>
   </widget>
