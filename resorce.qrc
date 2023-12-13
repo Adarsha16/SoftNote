@@ -3,4 +3,7 @@
         <file>logIn.png</file>
         <file>Header.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>Merriweather-Regular.ttf</file>
+    </qresource>
 </RCC>

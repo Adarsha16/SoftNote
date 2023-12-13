@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>966</width>
-    <height>741</height>
+    <width>741</width>
+    <height>748</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,36 +17,64 @@
    <widget class="QFrame" name="SignUp">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
+      <x>0</x>
+      <y>10</y>
       <width>761</width>
       <height>591</height>
      </rect>
     </property>
-    <widget class="QLabel" name="Pic">
+    <widget class="QPushButton" name="onSubmit">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>40</y>
-       <width>661</width>
-       <height>191</height>
+       <x>210</x>
+       <y>480</y>
+       <width>291</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>15</pointsize>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
-      <string/>
+      <string>Create a new account</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>621</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>46</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgba(153, 153, 153, 1)</string>
+     </property>
+     <property name="text">
+      <string>You can make anything by writing</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::MarkdownText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>81</x>
-       <y>496</y>
-       <width>31</width>
+       <x>330</x>
+       <y>550</y>
+       <width>41</width>
        <height>22</height>
       </rect>
      </property>
@@ -60,22 +88,41 @@
       <string>OR</string>
      </property>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>250</y>
-       <width>251</width>
-       <height>161</height>
+       <x>190</x>
+       <y>220</y>
+       <width>341</width>
+       <height>241</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
       <item>
        <widget class="QLineEdit" name="getUsername">
         <property name="font">
          <font>
           <pointsize>16</pointsize>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid red;
+border-radius:20px;</string>
         </property>
        </widget>
       </item>
@@ -114,44 +161,28 @@
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="signIn">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>530</y>
-       <width>211</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Log-in to SoftNote</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="onSubmit">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>450</y>
-       <width>241</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Create a new account</string>
-     </property>
-    </widget>
+   </widget>
+   <widget class="QPushButton" name="signIn">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>600</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Log-in to SoftNote</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -159,7 +190,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>966</width>
+     <width>741</width>
      <height>17</height>
     </rect>
    </property>

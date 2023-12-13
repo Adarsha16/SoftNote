@@ -9,6 +9,9 @@
 #include <QCoreApplication>
 #include <QRegularExpression>
 #include <QDebug>
+#include<QLineEdit>
+#include <QLabel>
+#include <QFontDatabase>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -20,12 +23,28 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+
     setWindowTitle("Welcome to SoftNote!");
+    Qt::WindowFlags flags = this->windowFlags();
+    flags &= ~Qt::WindowMaximizeButtonHint;
+    this->setWindowFlags(flags);
 
-    QPixmap pix (":/images/Header.png");
-    ui->Pic->setPixmap(pix);
+    // Set the font file path
+    QString fontPath = ":/Merriweather-Regular.ttf";
 
+    // Load the font
+    int fontId = QFontDatabase::addApplicationFont(fontPath);
 
+    // Check if the font was loaded successfully
+    if (fontId != -1) {
+        // Get the font family name from the loaded font
+        QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
+
+        // Set the font for label_2
+        ui->label_2->setFont(QFont(fontName, 40)); // You can adjust the size (12 in this case) as needed
+    } else {
+        // Font loading failed, handle the error
+    }
 
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");
@@ -37,6 +56,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->getEmail->setPlaceholderText("Enter Email");
     ui->getPass->setPlaceholderText("Enter Password");
     ui->getRePass->setPlaceholderText("Confirm Password");
+
+    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 65px 5px; }";
+    ui->getUsername->setStyleSheet(lineEditStyle);
+    ui->getEmail->setStyleSheet(lineEditStyle);
+    ui->getPass->setStyleSheet(lineEditStyle);
+    ui->getRePass->setStyleSheet(lineEditStyle);
+    ui->label_2->setWordWrap(true);
+
+
+
 
 }
 

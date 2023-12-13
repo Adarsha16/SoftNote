@@ -56,7 +56,7 @@ public:
         labelPass->setFont(font1);
         layoutWidget = new QWidget(SignIn);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(80, 183, 221, 81));
+        layoutWidget->setGeometry(QRect(80, 173, 301, 101));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);

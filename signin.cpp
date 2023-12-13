@@ -23,6 +23,10 @@ SignIn::SignIn(QWidget *parent) :
     ui->sUsername->setPlaceholderText("Enter Username");
     ui->sPassword->setPlaceholderText("Enter Password");
 
+    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 65px 5px; }";
+    ui->sPassword->setStyleSheet(lineEditStyle);
+    ui->sUsername->setStyleSheet(lineEditStyle);
+
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");
     if (!User_data.open()) {
