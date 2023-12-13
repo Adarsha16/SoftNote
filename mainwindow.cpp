@@ -12,6 +12,8 @@
 #include<QLineEdit>
 #include <QLabel>
 #include <QFontDatabase>
+#include <QRandomGenerator>
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,28 +25,26 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+    const char* quotes[] = {
+        "Time is the ink, and the notepad is the canvas of productivity.",
+        "Efficient code, efficient schedule; both start with a clean notepad.",
+        "You can make everything by writing",
+        "A well-organized notepad is the secret weapon of effective time management.",
+        "Code and schedules: both require thoughtful planning; both begin with a notepad."
+    };
+    QString fontPath = ":/Merriweather-Regular.ttf";
+    int fontId = QFontDatabase::addApplicationFont(fontPath);
+    QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    ui->label_2->setFont(QFont(fontName, 40));
+
+    int randomNumber = QRandomGenerator::global()->bounded(5);
+    QString selectedString = QString::fromUtf8(quotes[randomNumber]);
+    ui->label_2->setText(selectedString.trimmed());
 
     setWindowTitle("Welcome to SoftNote!");
     Qt::WindowFlags flags = this->windowFlags();
     flags &= ~Qt::WindowMaximizeButtonHint;
     this->setWindowFlags(flags);
-
-    // Set the font file path
-    QString fontPath = ":/Merriweather-Regular.ttf";
-
-    // Load the font
-    int fontId = QFontDatabase::addApplicationFont(fontPath);
-
-    // Check if the font was loaded successfully
-    if (fontId != -1) {
-        // Get the font family name from the loaded font
-        QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
-
-        // Set the font for label_2
-        ui->label_2->setFont(QFont(fontName, 40)); // You can adjust the size (12 in this case) as needed
-    } else {
-        // Font loading failed, handle the error
-    }
 
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");
@@ -57,16 +57,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->getPass->setPlaceholderText("Enter Password");
     ui->getRePass->setPlaceholderText("Confirm Password");
 
-    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 65px 5px; }";
+    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 5px; letter-spacing: 1px; }";
     ui->getUsername->setStyleSheet(lineEditStyle);
     ui->getEmail->setStyleSheet(lineEditStyle);
     ui->getPass->setStyleSheet(lineEditStyle);
     ui->getRePass->setStyleSheet(lineEditStyle);
+
     ui->label_2->setWordWrap(true);
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -75,8 +72,6 @@ MainWindow::~MainWindow()
     delete ui;
 
 }
-
-
 void MainWindow::on_onSubmit_clicked()
 {
         QString Username = ui->getUsername->text();
@@ -143,9 +138,6 @@ void MainWindow::on_onSubmit_clicked()
                qDebug() << "Failed to create the account!";
         }
     }
-
-
-
 void MainWindow::on_signIn_clicked()
 {
         SignIn logIn;

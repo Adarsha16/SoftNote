@@ -17,17 +17,17 @@
    <widget class="QFrame" name="SignUp">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>761</width>
-      <height>591</height>
+      <x>-20</x>
+      <y>-10</y>
+      <width>781</width>
+      <height>741</height>
      </rect>
     </property>
     <widget class="QPushButton" name="onSubmit">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>480</y>
+       <x>190</x>
+       <y>580</y>
        <width>291</width>
        <height>41</height>
       </rect>
@@ -45,10 +45,10 @@
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>40</y>
-       <width>621</width>
-       <height>171</height>
+       <x>40</x>
+       <y>10</y>
+       <width>671</width>
+       <height>281</height>
       </rect>
      </property>
      <property name="font">
@@ -66,14 +66,17 @@
       <enum>Qt::MarkdownText</enum>
      </property>
      <property name="alignment">
-      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>550</y>
+       <x>300</x>
+       <y>630</y>
        <width>41</width>
        <height>22</height>
       </rect>
@@ -88,11 +91,11 @@
       <string>OR</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>220</y>
+       <x>180</x>
+       <y>310</y>
        <width>341</width>
        <height>241</height>
       </rect>
@@ -121,8 +124,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">border:1px solid red;
-border-radius:20px;</string>
+         <string notr="true"/>
         </property>
        </widget>
       </item>
@@ -161,28 +163,28 @@ border-radius:20px;</string>
       </item>
      </layout>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="signIn">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>600</y>
-      <width>291</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>Log-in to SoftNote</string>
-    </property>
+    <widget class="QPushButton" name="signIn">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>670</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Log-in to SoftNote</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
