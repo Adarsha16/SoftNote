@@ -11,8 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -28,26 +27,18 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QGroupBox *SignUp;
-    QLabel *Pic;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *Username;
-    QLineEdit *getUsername;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *Email;
-    QLineEdit *getEmail;
-    QHBoxLayout *horizontalLayout_3;
-    QLabel *Password;
-    QLineEdit *getPass;
-    QHBoxLayout *horizontalLayout_4;
-    QLabel *Re_pass;
-    QLineEdit *getRePass;
-    QWidget *widget1;
-    QHBoxLayout *horizontalLayout_5;
+    QFrame *SignUp;
     QPushButton *onSubmit;
+    QLabel *label_2;
+    QLabel *label;
+    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *getUsername;
+    QLineEdit *getEmail;
+    QLineEdit *getPass;
+    QLineEdit *getRePass;
     QPushButton *signIn;
+    QLabel *label_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -55,115 +46,91 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(966, 741);
+        MainWindow->resize(742, 776);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        SignUp = new QGroupBox(centralwidget);
+        SignUp = new QFrame(centralwidget);
         SignUp->setObjectName("SignUp");
-        SignUp->setGeometry(QRect(40, 20, 761, 591));
-        Pic = new QLabel(SignUp);
-        Pic->setObjectName("Pic");
-        Pic->setGeometry(QRect(30, 40, 661, 191));
+        SignUp->setGeometry(QRect(-20, -10, 781, 741));
+        onSubmit = new QPushButton(SignUp);
+        onSubmit->setObjectName("onSubmit");
+        onSubmit->setGeometry(QRect(210, 580, 291, 41));
         QFont font;
-        font.setPointSize(15);
-        Pic->setFont(font);
-        widget = new QWidget(SignUp);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(30, 300, 244, 140));
-        verticalLayout = new QVBoxLayout(widget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        Username = new QLabel(widget);
-        Username->setObjectName("Username");
+        font.setPointSize(16);
+        font.setBold(true);
+        onSubmit->setFont(font);
+        label_2 = new QLabel(SignUp);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(40, 40, 681, 251));
         QFont font1;
-        font1.setPointSize(16);
-        font1.setBold(true);
-        Username->setFont(font1);
-
-        horizontalLayout->addWidget(Username);
-
-        getUsername = new QLineEdit(widget);
+        font1.setPointSize(46);
+        label_2->setFont(font1);
+        label_2->setStyleSheet(QString::fromUtf8("color:rgba(153, 153, 153, 1)"));
+        label_2->setTextFormat(Qt::MarkdownText);
+        label_2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_2->setWordWrap(true);
+        label = new QLabel(SignUp);
+        label->setObjectName("label");
+        label->setGeometry(QRect(350, 630, 41, 22));
+        QFont font2;
+        font2.setPointSize(16);
+        font2.setItalic(true);
+        label->setFont(font2);
+        layoutWidget = new QWidget(SignUp);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(200, 310, 341, 241));
+        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout->setSpacing(20);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(10, 10, 10, 10);
+        getUsername = new QLineEdit(layoutWidget);
         getUsername->setObjectName("getUsername");
+        QFont font3;
+        font3.setPointSize(16);
+        getUsername->setFont(font3);
+        getUsername->setStyleSheet(QString::fromUtf8(""));
 
-        horizontalLayout->addWidget(getUsername);
+        verticalLayout->addWidget(getUsername);
 
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        Email = new QLabel(widget);
-        Email->setObjectName("Email");
-        Email->setFont(font1);
-
-        horizontalLayout_2->addWidget(Email);
-
-        getEmail = new QLineEdit(widget);
+        getEmail = new QLineEdit(layoutWidget);
         getEmail->setObjectName("getEmail");
+        getEmail->setFont(font3);
 
-        horizontalLayout_2->addWidget(getEmail);
+        verticalLayout->addWidget(getEmail);
 
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        Password = new QLabel(widget);
-        Password->setObjectName("Password");
-        Password->setFont(font1);
-
-        horizontalLayout_3->addWidget(Password);
-
-        getPass = new QLineEdit(widget);
+        getPass = new QLineEdit(layoutWidget);
         getPass->setObjectName("getPass");
+        getPass->setFont(font3);
         getPass->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout_3->addWidget(getPass);
+        verticalLayout->addWidget(getPass);
 
-
-        verticalLayout->addLayout(horizontalLayout_3);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        Re_pass = new QLabel(widget);
-        Re_pass->setObjectName("Re_pass");
-        Re_pass->setFont(font1);
-
-        horizontalLayout_4->addWidget(Re_pass);
-
-        getRePass = new QLineEdit(widget);
+        getRePass = new QLineEdit(layoutWidget);
         getRePass->setObjectName("getRePass");
+        getRePass->setFont(font3);
         getRePass->setEchoMode(QLineEdit::Password);
 
-        horizontalLayout_4->addWidget(getRePass);
+        verticalLayout->addWidget(getRePass);
 
-
-        verticalLayout->addLayout(horizontalLayout_4);
-
-        widget1 = new QWidget(SignUp);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(10, 480, 352, 38));
-        horizontalLayout_5 = new QHBoxLayout(widget1);
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
-        onSubmit = new QPushButton(widget1);
-        onSubmit->setObjectName("onSubmit");
-        onSubmit->setFont(font1);
-
-        horizontalLayout_5->addWidget(onSubmit);
-
-        signIn = new QPushButton(widget1);
+        signIn = new QPushButton(SignUp);
         signIn->setObjectName("signIn");
-        signIn->setFont(font1);
-
-        horizontalLayout_5->addWidget(signIn);
-
+        signIn->setGeometry(QRect(210, 660, 291, 41));
+        signIn->setFont(font);
+        signIn->setStyleSheet(QString::fromUtf8(""));
+        label_3 = new QLabel(SignUp);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(600, 20, 151, 31));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
+        label_3->setSizePolicy(sizePolicy);
+        label_3->setPixmap(QPixmap(QString::fromUtf8(":/images/SoftNote.png")));
+        label_3->setWordWrap(false);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 966, 21));
+        menubar->setGeometry(QRect(0, 0, 742, 17));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -177,14 +144,11 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        SignUp->setTitle(QString());
-        Pic->setText(QString());
-        Username->setText(QCoreApplication::translate("MainWindow", "Username     ", nullptr));
-        Email->setText(QCoreApplication::translate("MainWindow", "Email             ", nullptr));
-        Password->setText(QCoreApplication::translate("MainWindow", "Password      ", nullptr));
-        Re_pass->setText(QCoreApplication::translate("MainWindow", "Re-Password", nullptr));
         onSubmit->setText(QCoreApplication::translate("MainWindow", "Create a new account", nullptr));
-        signIn->setText(QCoreApplication::translate("MainWindow", "Log In", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "You can make anything by writing", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "OR", nullptr));
+        signIn->setText(QCoreApplication::translate("MainWindow", "Log-in to SoftNote", nullptr));
+        label_3->setText(QString());
     } // retranslateUi
 
 };

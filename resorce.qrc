@@ -2,5 +2,10 @@
     <qresource prefix="/images">
         <file>logIn.png</file>
         <file>Header.png</file>
+        <file>SoftNote.png</file>
+        <file>penIcon.ico</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Merriweather-Regular.ttf</file>
     </qresource>
 </RCC>
