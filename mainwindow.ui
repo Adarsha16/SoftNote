@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>748</height>
+    <width>742</width>
+    <height>776</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
     <widget class="QPushButton" name="onSubmit">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>210</x>
        <y>580</y>
        <width>291</width>
        <height>41</height>
@@ -46,9 +46,9 @@
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>10</y>
-       <width>671</width>
-       <height>281</height>
+       <y>40</y>
+       <width>681</width>
+       <height>251</height>
       </rect>
      </property>
      <property name="font">
@@ -75,7 +75,7 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>350</x>
        <y>630</y>
        <width>41</width>
        <height>22</height>
@@ -94,7 +94,7 @@
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>200</x>
        <y>310</y>
        <width>341</width>
        <height>241</height>
@@ -166,8 +166,8 @@
     <widget class="QPushButton" name="signIn">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>670</y>
+       <x>210</x>
+       <y>660</y>
        <width>291</width>
        <height>41</height>
       </rect>
@@ -185,6 +185,31 @@
       <string>Log-in to SoftNote</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>20</y>
+       <width>151</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resorce.qrc">:/images/SoftNote.png</pixmap>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -192,13 +217,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>741</width>
+     <width>742</width>
      <height>17</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resorce.qrc"/>
+ </resources>
  <connections/>
 </ui>

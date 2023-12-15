@@ -30,14 +30,15 @@ MainWindow::MainWindow(QWidget *parent)
         "Efficient code, efficient schedule; both start with a clean notepad.",
         "You can make everything by writing",
         "A well-organized notepad is the secret weapon of effective time management.",
-        "Code and schedules: both require thoughtful planning; both begin with a notepad."
+        "Code and schedules: both require thoughtful planning; both begin with a notepad.",
+        "Do not repeat, I repeat DO NOT REPEAT"
     };
     QString fontPath = ":/Merriweather-Regular.ttf";
     int fontId = QFontDatabase::addApplicationFont(fontPath);
     QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
-    ui->label_2->setFont(QFont(fontName, 40));
+    ui->label_2->setFont(QFont(fontName, 36));
 
-    int randomNumber = QRandomGenerator::global()->bounded(5);
+    int randomNumber = QRandomGenerator::global()->bounded(6);
     QString selectedString = QString::fromUtf8(quotes[randomNumber]);
     ui->label_2->setText(selectedString.trimmed());
 
@@ -62,6 +63,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->getEmail->setStyleSheet(lineEditStyle);
     ui->getPass->setStyleSheet(lineEditStyle);
     ui->getRePass->setStyleSheet(lineEditStyle);
+
+    QString buttonStyle = "QPushButton { border-radius: 10px; border: 1px solid #555555;  padding: 5px; }";
+    ui->signIn->setStyleSheet(buttonStyle);
+    ui->onSubmit->setStyleSheet(buttonStyle);
 
     ui->label_2->setWordWrap(true);
 }

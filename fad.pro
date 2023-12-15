@@ -30,3 +30,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resorce.qrc
+
+RC_ICONS = penIcon.ico

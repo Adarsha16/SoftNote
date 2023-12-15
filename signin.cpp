@@ -27,6 +27,9 @@ SignIn::SignIn(QWidget *parent) :
     ui->sPassword->setStyleSheet(lineEditStyle);
     ui->sUsername->setStyleSheet(lineEditStyle);
 
+    QString buttonStyle = "QPushButton { border-radius: 10px; border: 1px solid #555555;  padding: 5px; }";
+    ui->signIn->setStyleSheet(buttonStyle);
+
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");
     if (!User_data.open()) {

@@ -45,7 +45,7 @@ public:
         labelPic->setGeometry(QRect(50, 70, 471, 81));
         signIn = new QPushButton(SignIn);
         signIn->setObjectName("signIn");
-        signIn->setGeometry(QRect(80, 290, 91, 41));
+        signIn->setGeometry(QRect(80, 290, 101, 41));
         QFont font1;
         font1.setPointSize(16);
         font1.setBold(true);
@@ -56,7 +56,7 @@ public:
         labelPass->setFont(font1);
         layoutWidget = new QWidget(SignIn);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(80, 173, 301, 101));
+        layoutWidget->setGeometry(QRect(80, 183, 301, 91));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
