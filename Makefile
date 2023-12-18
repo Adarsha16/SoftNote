@@ -229,6 +229,7 @@ Makefile: fad.pro C:/Qt/6.6.0/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt/6.6.0/
 		C:/Qt/6.6.0/mingw_64/lib/Qt6Widgets.prl \
 		C:/Qt/6.6.0/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.6.0/mingw_64/lib/Qt6Sql.prl \
+		C:/Qt/6.6.0/mingw_64/lib/Qt6Network.prl \
 		C:/Qt/6.6.0/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.6.0/mingw_64/lib/Qt6EntryPoint.prl \
 		C:/Qt/6.6.0/mingw_64/mkspecs/features/build_pass.prf \
@@ -393,6 +394,7 @@ fad.pro:
 C:/Qt/6.6.0/mingw_64/lib/Qt6Widgets.prl:
 C:/Qt/6.6.0/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.6.0/mingw_64/lib/Qt6Sql.prl:
+C:/Qt/6.6.0/mingw_64/lib/Qt6Network.prl:
 C:/Qt/6.6.0/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.6.0/mingw_64/lib/Qt6EntryPoint.prl:
 C:/Qt/6.6.0/mingw_64/mkspecs/features/build_pass.prf:

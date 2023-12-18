@@ -1,7 +1,10 @@
-QT       += core gui sql
+QT += core gui sql
 QT += widgets
+QT += core gui network
+
 FONT_PATH = :/Merriweather-Regular.ttf
 EXTRA_FILES += $$FONT_PATH
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17

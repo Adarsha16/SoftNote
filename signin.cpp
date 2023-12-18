@@ -23,11 +23,27 @@ SignIn::SignIn(QWidget *parent) :
     ui->sUsername->setPlaceholderText("Enter Username");
     ui->sPassword->setPlaceholderText("Enter Password");
 
-    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 65px 5px; }";
+    QString lineEditStyle = "QLineEdit { "
+        "   border-radius: 10px; "
+        "   border: 1px solid #555555; "
+        "   padding: 5px; "
+        "} "
+        "QLineEdit:hover { "
+        "   background-color: #e0e0e0; "
+        "}";
+
     ui->sPassword->setStyleSheet(lineEditStyle);
     ui->sUsername->setStyleSheet(lineEditStyle);
 
-    QString buttonStyle = "QPushButton { border-radius: 10px; border: 1px solid #555555;  padding: 5px; }";
+    QString buttonStyle = "QPushButton { "
+                          "   border-radius: 10px; "
+                          "   border: 1px solid #555555; "
+                          "   padding: 5px; "
+                          "} "
+                          "QPushButton:hover { "
+                          "   background-color:#e0e0e0; "
+                          "}";
+
     ui->signIn->setStyleSheet(buttonStyle);
 
     User_data.setDatabaseName("User_data.db");

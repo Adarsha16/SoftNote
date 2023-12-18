@@ -13,6 +13,9 @@
 #include <QLabel>
 #include <QFontDatabase>
 #include <QRandomGenerator>
+//#include <QtGui>
+//#include <QtCore>
+//#include <QtNetworkAuth>
 
 
 
@@ -26,19 +29,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     const char* quotes[] = {
-        "Time is the ink, and the notepad is the canvas of productivity.",
-        "Efficient code, efficient schedule; both start with a clean notepad.",
-        "You can make everything by writing",
-        "A well-organized notepad is the secret weapon of effective time management.",
-        "Code and schedules: both require thoughtful planning; both begin with a notepad.",
-        "Do not repeat, I repeat DO NOT REPEAT"
+        "\"Time is the ink, and the notepad is the canvas of productivity.\"",
+        "\"Seize ideas on the fly. Your thoughts, effortlessly organized\"",
+        "\"You can make anything by writing.\"",
+        "\"Your ideas, neatly captured. Our note app, your creative ally\"",
+        "\"Capture thoughts, spark creativity. Our note app, your digital sanctuary.\"",
+        "\"Do not repeat, I repeat do not repeat.\"",
+        "\"Welcome Back\""
     };
     QString fontPath = ":/Merriweather-Regular.ttf";
     int fontId = QFontDatabase::addApplicationFont(fontPath);
     QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
-    ui->label_2->setFont(QFont(fontName, 36));
+    ui->label_2->setFont(QFont(fontName, 30));
 
-    int randomNumber = QRandomGenerator::global()->bounded(6);
+    int randomNumber = QRandomGenerator::global()->bounded(7);
     QString selectedString = QString::fromUtf8(quotes[randomNumber]);
     ui->label_2->setText(selectedString.trimmed());
 
@@ -58,13 +62,30 @@ MainWindow::MainWindow(QWidget *parent)
     ui->getPass->setPlaceholderText("Enter Password");
     ui->getRePass->setPlaceholderText("Confirm Password");
 
-    QString lineEditStyle = "QLineEdit { border-radius: 10px; border: 2px solid #555555;  padding: 5px; letter-spacing: 1px; }";
+    QString lineEditStyle = "QLineEdit { "
+                            "   border-radius: 10px; "
+                            "   border: 1px solid #555555; "
+
+                            "   padding: 5px; "
+                            "} "
+                            "QLineEdit:hover { "
+                            "   background-color: #e0e0e0; "
+                            "}";
+
     ui->getUsername->setStyleSheet(lineEditStyle);
     ui->getEmail->setStyleSheet(lineEditStyle);
     ui->getPass->setStyleSheet(lineEditStyle);
     ui->getRePass->setStyleSheet(lineEditStyle);
 
-    QString buttonStyle = "QPushButton { border-radius: 10px; border: 1px solid #555555;  padding: 5px; }";
+    QString buttonStyle = "QPushButton { "
+                          "   border-radius: 10px; "
+                          "   border: 1px solid #555555; "
+                          "   padding: 5px; "
+                          "} "
+                          "QPushButton:hover { "
+                          "   background-color:#e0e0e0; "
+                          "}";
+
     ui->signIn->setStyleSheet(buttonStyle);
     ui->onSubmit->setStyleSheet(buttonStyle);
 
