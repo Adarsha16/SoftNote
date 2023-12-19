@@ -5,7 +5,7 @@
 #include <QSqlQuery>
 #include <QMessageBox>
 #include<QPixmap>
-
+#include <hashingFunction.h>
 
 SignIn::SignIn(QWidget *parent) :
     QDialog(parent),
@@ -64,6 +64,7 @@ void SignIn::on_signIn_clicked()
 {
     QString Username = ui->sUsername->text();
     QString Password = ui->sPassword->text();
+    QString checkPassword = hashPassword(Password);
     QString rUsername;
     QString rPassword;
     QSqlQuery query;
@@ -85,8 +86,10 @@ void SignIn::on_signIn_clicked()
 if (id == 0) {
     QMessageBox::information(this, "Invalid Username!", "Username provided doesn't exist!");
         }
-    else if (rUsername == Username && rPassword == Password) {
-            QMessageBox::information(this, "Login Successful!", "You are now logged in");
+    else if (rUsername == Username && rPassword == checkPassword) {
+        QProcess noteAppProcess;
+        noteAppProcess.startDetached("C:/Users/LENOVO/Pictures/notepad 2/tryingagain.exe");
+    //QMessageBox::information(this, "Login Successful!", "You are now logged in");
         }
         else {
 

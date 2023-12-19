@@ -8,7 +8,6 @@
 namespace Ui {
 class SignIn;
 }
-
 class SignIn : public QDialog
 {
     Q_OBJECT

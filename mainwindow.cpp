@@ -4,19 +4,13 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlQuery>
-#include "signin.h"
-#include <QPixmap>
+#include<signin.h>
 #include <QCoreApplication>
 #include <QRegularExpression>
 #include <QDebug>
-#include<QLineEdit>
-#include <QLabel>
 #include <QFontDatabase>
 #include <QRandomGenerator>
-//#include <QtGui>
-//#include <QtCore>
-//#include <QtNetworkAuth>
-
+#include <hashingFunction.h>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -37,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
         "\"Do not repeat, I repeat do not repeat.\"",
         "\"Welcome Back\""
     };
+
+
     QString fontPath = ":/Merriweather-Regular.ttf";
     int fontId = QFontDatabase::addApplicationFont(fontPath);
     QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
@@ -98,6 +94,7 @@ MainWindow::~MainWindow()
     delete ui;
 
 }
+
 void MainWindow::on_onSubmit_clicked()
 {
         QString Username = ui->getUsername->text();
@@ -108,6 +105,9 @@ void MainWindow::on_onSubmit_clicked()
         int pLength = Password.length();
         QString tUsername = Username;
         int count = 0;
+
+        QString hashedPassword = hashPassword(Password);
+        QString hashedRepass =  hashPassword(rPassword);
 
         QSqlQuery query;
 
@@ -150,7 +150,7 @@ void MainWindow::on_onSubmit_clicked()
 
             query.prepare("INSERT INTO userData(Username, Password, Email) VALUES (:Username, :Password, :Email)");
             query.bindValue(":Username", Username);
-            query.bindValue(":Password", Password);
+            query.bindValue(":Password", hashedPassword);
             query.bindValue(":Email", Email);
 
             if (!query.exec()) {
