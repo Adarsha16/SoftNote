@@ -1,5 +1,6 @@
 #include "signin.h"
 #include "ui_signin.h"
+#include <forgotpassword.h>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -45,6 +46,7 @@ SignIn::SignIn(QWidget *parent) :
                           "}";
 
     ui->signIn->setStyleSheet(buttonStyle);
+    ui->forgotPassword->setStyleSheet(buttonStyle);
 
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");
@@ -97,4 +99,12 @@ if (id == 0) {
         }
     }
 
+
+
+void SignIn::on_forgotPassword_clicked()
+{
+    forgotPassword resetPassword;
+    resetPassword.setModal(true);
+    resetPassword.exec();
+}
 

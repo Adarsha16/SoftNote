@@ -20,6 +20,8 @@ public:
 private slots:
     void on_signIn_clicked();
 
+    void on_forgotPassword_clicked();
+
 private:
     Ui::SignIn *ui;
 };

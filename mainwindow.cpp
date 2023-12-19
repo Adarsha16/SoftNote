@@ -107,7 +107,7 @@ void MainWindow::on_onSubmit_clicked()
         int count = 0;
 
         QString hashedPassword = hashPassword(Password);
-        QString hashedRepass =  hashPassword(rPassword);
+        QString hashedEmail = hashPassword(Email);
 
         QSqlQuery query;
 
@@ -151,7 +151,7 @@ void MainWindow::on_onSubmit_clicked()
             query.prepare("INSERT INTO userData(Username, Password, Email) VALUES (:Username, :Password, :Email)");
             query.bindValue(":Username", Username);
             query.bindValue(":Password", hashedPassword);
-            query.bindValue(":Email", Email);
+            query.bindValue(":Email", hashedEmail);
 
             if (!query.exec()) {
                 qDebug() << "Data insertion error: " << query.lastError().text();

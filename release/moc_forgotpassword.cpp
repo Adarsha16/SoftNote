@@ -1,12 +1,12 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'signin.h'
+** Meta object code from reading C++ file 'forgotpassword.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.6.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../signin.h"
+#include "../forgotpassword.h"
 #include <QtCore/qmetatype.h>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
@@ -19,7 +19,7 @@ QT_BEGIN_MOC_NAMESPACE
 #include <memory>
 
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'signin.h' doesn't include <QObject>."
+#error "The header file 'forgotpassword.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.6.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -36,46 +36,42 @@ QT_WARNING_DISABLE_GCC("-Wuseless-cast")
 namespace {
 
 #ifdef QT_MOC_HAS_STRINGDATA
-struct qt_meta_stringdata_CLASSSignInENDCLASS_t {};
-static constexpr auto qt_meta_stringdata_CLASSSignInENDCLASS = QtMocHelpers::stringData(
-    "SignIn",
-    "on_signIn_clicked",
-    "",
-    "on_forgotPassword_clicked"
+struct qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t {};
+static constexpr auto qt_meta_stringdata_CLASSforgotPasswordENDCLASS = QtMocHelpers::stringData(
+    "forgotPassword",
+    "on_submitNewPass_clicked",
+    ""
 );
 #else  // !QT_MOC_HAS_STRING_DATA
-struct qt_meta_stringdata_CLASSSignInENDCLASS_t {
-    uint offsetsAndSizes[8];
-    char stringdata0[7];
-    char stringdata1[18];
+struct qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t {
+    uint offsetsAndSizes[6];
+    char stringdata0[15];
+    char stringdata1[25];
     char stringdata2[1];
-    char stringdata3[26];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_CLASSSignInENDCLASS_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_CLASSSignInENDCLASS_t qt_meta_stringdata_CLASSSignInENDCLASS = {
+    uint(sizeof(qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t qt_meta_stringdata_CLASSforgotPasswordENDCLASS = {
     {
-        QT_MOC_LITERAL(0, 6),  // "SignIn"
-        QT_MOC_LITERAL(7, 17),  // "on_signIn_clicked"
-        QT_MOC_LITERAL(25, 0),  // ""
-        QT_MOC_LITERAL(26, 25)   // "on_forgotPassword_clicked"
+        QT_MOC_LITERAL(0, 14),  // "forgotPassword"
+        QT_MOC_LITERAL(15, 24),  // "on_submitNewPass_clicked"
+        QT_MOC_LITERAL(40, 0)   // ""
     },
-    "SignIn",
-    "on_signIn_clicked",
-    "",
-    "on_forgotPassword_clicked"
+    "forgotPassword",
+    "on_submitNewPass_clicked",
+    ""
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_CLASSSignInENDCLASS[] = {
+Q_CONSTINIT static const uint qt_meta_data_CLASSforgotPasswordENDCLASS[] = {
 
  // content:
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -83,73 +79,68 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSignInENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    0,   27,    2, 0x08,    2 /* Private */,
+       1,    0,   20,    2, 0x08,    1 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject SignIn::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject forgotPassword::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_CLASSSignInENDCLASS.offsetsAndSizes,
-    qt_meta_data_CLASSSignInENDCLASS,
+    qt_meta_stringdata_CLASSforgotPasswordENDCLASS.offsetsAndSizes,
+    qt_meta_data_CLASSforgotPasswordENDCLASS,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSSignInENDCLASS_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<SignIn, std::true_type>,
-        // method 'on_signIn_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_forgotPassword_clicked'
+        QtPrivate::TypeAndForceComplete<forgotPassword, std::true_type>,
+        // method 'on_submitNewPass_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
 
-void SignIn::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void forgotPassword::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<SignIn *>(_o);
+        auto *_t = static_cast<forgotPassword *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_signIn_clicked(); break;
-        case 1: _t->on_forgotPassword_clicked(); break;
+        case 0: _t->on_submitNewPass_clicked(); break;
         default: ;
         }
     }
     (void)_a;
 }
 
-const QMetaObject *SignIn::metaObject() const
+const QMetaObject *forgotPassword::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *SignIn::qt_metacast(const char *_clname)
+void *forgotPassword::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_CLASSSignInENDCLASS.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CLASSforgotPasswordENDCLASS.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int SignIn::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int forgotPassword::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 1)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }
