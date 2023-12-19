@@ -50,7 +50,7 @@ public:
         Cancel->setFont(font);
         label = new QLabel(forgotPassword);
         label->setObjectName("label");
-        label->setGeometry(QRect(60, 20, 61, 16));
+        label->setGeometry(QRect(30, 20, 401, 61));
         widget = new QWidget(forgotPassword);
         widget->setObjectName("widget");
         widget->setGeometry(QRect(80, 140, 301, 201));
@@ -72,12 +72,14 @@ public:
         newPass = new QLineEdit(widget);
         newPass->setObjectName("newPass");
         newPass->setFont(font);
+        newPass->setEchoMode(QLineEdit::Password);
 
         verticalLayout->addWidget(newPass);
 
         rNewPass = new QLineEdit(widget);
         rNewPass->setObjectName("rNewPass");
         rNewPass->setFont(font);
+        rNewPass->setEchoMode(QLineEdit::Password);
 
         verticalLayout->addWidget(rNewPass);
 

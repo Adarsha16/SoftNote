@@ -110,3 +110,9 @@ void forgotPassword::on_submitNewPass_clicked()
 
 }
 
+
+void forgotPassword::on_Cancel_clicked()
+{
+    this->close();
+}
+

@@ -89,9 +89,11 @@ if (id == 0) {
     QMessageBox::information(this, "Invalid Username!", "Username provided doesn't exist!");
         }
     else if (rUsername == Username && rPassword == checkPassword) {
+
         QProcess noteAppProcess;
         noteAppProcess.startDetached("C:/Users/LENOVO/Pictures/notepad 2/tryingagain.exe");
     //QMessageBox::information(this, "Login Successful!", "You are now logged in");
+        this->close();
         }
         else {
 

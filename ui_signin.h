@@ -49,12 +49,15 @@ public:
         signIn->setGeometry(QRect(80, 290, 101, 41));
         QFont font1;
         font1.setPointSize(16);
-        font1.setBold(true);
+        font1.setBold(false);
         signIn->setFont(font1);
         labelPass = new QLabel(SignIn);
         labelPass->setObjectName("labelPass");
         labelPass->setGeometry(QRect(82, 191, 16, 22));
-        labelPass->setFont(font1);
+        QFont font2;
+        font2.setPointSize(16);
+        font2.setBold(true);
+        labelPass->setFont(font2);
         layoutWidget = new QWidget(SignIn);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(80, 183, 301, 91));

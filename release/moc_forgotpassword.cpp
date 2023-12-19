@@ -40,14 +40,16 @@ struct qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSforgotPasswordENDCLASS = QtMocHelpers::stringData(
     "forgotPassword",
     "on_submitNewPass_clicked",
-    ""
+    "",
+    "on_Cancel_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[8];
     char stringdata0[15];
     char stringdata1[25];
     char stringdata2[1];
+    char stringdata3[18];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -55,11 +57,13 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSforgotPasswordENDCLASS_t qt_met
     {
         QT_MOC_LITERAL(0, 14),  // "forgotPassword"
         QT_MOC_LITERAL(15, 24),  // "on_submitNewPass_clicked"
-        QT_MOC_LITERAL(40, 0)   // ""
+        QT_MOC_LITERAL(40, 0),  // ""
+        QT_MOC_LITERAL(41, 17)   // "on_Cancel_clicked"
     },
     "forgotPassword",
     "on_submitNewPass_clicked",
-    ""
+    "",
+    "on_Cancel_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -71,7 +75,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSforgotPasswordENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,9 +83,11 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSforgotPasswordENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   26,    2, 0x08,    1 /* Private */,
+       3,    0,   27,    2, 0x08,    2 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -97,6 +103,8 @@ Q_CONSTINIT const QMetaObject forgotPassword::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<forgotPassword, std::true_type>,
         // method 'on_submitNewPass_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_Cancel_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -109,6 +117,7 @@ void forgotPassword::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         (void)_t;
         switch (_id) {
         case 0: _t->on_submitNewPass_clicked(); break;
+        case 1: _t->on_Cancel_clicked(); break;
         default: ;
         }
     }
@@ -134,13 +143,13 @@ int forgotPassword::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

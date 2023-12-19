@@ -21,6 +21,8 @@ public:
 private slots:
     void on_submitNewPass_clicked();
 
+    void on_Cancel_clicked();
+
 private:
     Ui::forgotPassword *ui;
 };
