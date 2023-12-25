@@ -46,7 +46,7 @@
    <property name="font">
     <font>
      <pointsize>16</pointsize>
-     <bold>true</bold>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -110,6 +110,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="forgotPassword">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>290</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Forgot Password?</string>
+   </property>
   </widget>
  </widget>
  <resources/>

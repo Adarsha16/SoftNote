@@ -54,10 +54,10 @@ public:
         SignUp->setGeometry(QRect(-20, -10, 781, 741));
         onSubmit = new QPushButton(SignUp);
         onSubmit->setObjectName("onSubmit");
-        onSubmit->setGeometry(QRect(210, 580, 291, 41));
+        onSubmit->setGeometry(QRect(210, 580, 321, 41));
         QFont font;
         font.setPointSize(16);
-        font.setBold(true);
+        font.setBold(false);
         onSubmit->setFont(font);
         label_2 = new QLabel(SignUp);
         label_2->setObjectName("label_2");
@@ -82,7 +82,7 @@ public:
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(20);
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(10, 10, 10, 10);
+        verticalLayout->setContentsMargins(10, 10, 0, 10);
         getUsername = new QLineEdit(layoutWidget);
         getUsername->setObjectName("getUsername");
         QFont font3;
@@ -114,7 +114,7 @@ public:
 
         signIn = new QPushButton(SignUp);
         signIn->setObjectName("signIn");
-        signIn->setGeometry(QRect(210, 660, 291, 41));
+        signIn->setGeometry(QRect(210, 660, 321, 41));
         signIn->setFont(font);
         signIn->setStyleSheet(QString::fromUtf8(""));
         label_3 = new QLabel(SignUp);

@@ -28,14 +28,14 @@
       <rect>
        <x>210</x>
        <y>580</y>
-       <width>291</width>
+       <width>321</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>16</pointsize>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -111,7 +111,7 @@
        <number>10</number>
       </property>
       <property name="rightMargin">
-       <number>10</number>
+       <number>0</number>
       </property>
       <property name="bottomMargin">
        <number>10</number>
@@ -168,14 +168,14 @@
       <rect>
        <x>210</x>
        <y>660</y>
-       <width>291</width>
+       <width>321</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <pointsize>16</pointsize>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">

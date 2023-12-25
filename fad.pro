@@ -1,7 +1,9 @@
-QT       += core gui sql
+QT += core gui sql
 QT += widgets
+
 FONT_PATH = :/Merriweather-Regular.ttf
 EXTRA_FILES += $$FONT_PATH
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -11,17 +13,24 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    forgotpassword.cpp \
+    hasingFunction.cpp \
     main.cpp \
     mainwindow.cpp \
     signin.cpp
 
 HEADERS += \
+    forgotpassword.h \
+    hashingFunction.h \
     mainwindow.h \
     signin.h
 
 FORMS += \
+    forgotpassword.ui \
     mainwindow.ui \
     signin.ui
+
+SUBDIRS += notepad/
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
