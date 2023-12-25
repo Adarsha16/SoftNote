@@ -168,6 +168,7 @@ void MainWindow::on_signIn_clicked()
 {
         SignIn logIn;
         logIn.setModal(true);
+        this->close();
         logIn.exec();
 }
 

@@ -6,12 +6,21 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QMessageBox>
+ #include <QFontDatabase>
 
 forgotPassword::forgotPassword(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::forgotPassword)
 {
     ui->setupUi(this);
+
+
+    QString fontPath = ":/Merriweather-Regular.ttf";
+    int fontId = QFontDatabase::addApplicationFont(fontPath);
+    QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    ui->label->setFont(QFont(fontName, 20));
+    ui->label->setText("Forgot Your Password?");
+
     ui->fUsername->setPlaceholderText("Enter Username");
     ui->fEmail->setPlaceholderText("Enter Email");
     ui->newPass->setPlaceholderText("Enter New Password");

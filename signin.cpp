@@ -8,6 +8,8 @@
 #include<QPixmap>
 #include <hashingFunction.h>
 
+QString currentUser;
+int currentUserId;
 SignIn::SignIn(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignIn)
@@ -23,7 +25,6 @@ SignIn::SignIn(QWidget *parent) :
 
     ui->sUsername->setPlaceholderText("Enter Username");
     ui->sPassword->setPlaceholderText("Enter Password");
-
     QString lineEditStyle = "QLineEdit { "
         "   border-radius: 10px; "
         "   border: 1px solid #555555; "
@@ -90,11 +91,23 @@ if (id == 0) {
         }
     else if (rUsername == Username && rPassword == checkPassword) {
 
+        currentUser = Username;
+        currentUserId = id;
+
         QProcess noteAppProcess;
-        noteAppProcess.startDetached("C:/Users/LENOVO/Pictures/notepad 2/tryingagain.exe");
-    //QMessageBox::information(this, "Login Successful!", "You are now logged in");
+       // noteAppProcess.startDetached("C:/Users/LENOVO/Documents/SignUp/SoftNote/notepad/tryingagain.exe");
+        QString notepadPath = QCoreApplication::applicationDirPath() + "/notepad/tryingagain.exe";
+
+        // Check if the file exists before attempting to start the process
+        if (QFile::exists(notepadPath)) {
+            // Start the process detached
+            QProcess::startDetached(notepadPath);
+        } else {
+            qDebug() << "Error: File not found - " << notepadPath;
+        }
         this->close();
         }
+
         else {
 
             QMessageBox::information(this, "Invalid Password!", "Wrong password. Try again");
