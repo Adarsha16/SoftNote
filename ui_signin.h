@@ -30,7 +30,6 @@ public:
     QVBoxLayout *verticalLayout;
     QLineEdit *sUsername;
     QLineEdit *sPassword;
-    QPushButton *forgotPassword;
 
     void setupUi(QDialog *SignIn)
     {
@@ -49,15 +48,12 @@ public:
         signIn->setGeometry(QRect(80, 290, 101, 41));
         QFont font1;
         font1.setPointSize(16);
-        font1.setBold(false);
+        font1.setBold(true);
         signIn->setFont(font1);
         labelPass = new QLabel(SignIn);
         labelPass->setObjectName("labelPass");
         labelPass->setGeometry(QRect(82, 191, 16, 22));
-        QFont font2;
-        font2.setPointSize(16);
-        font2.setBold(true);
-        labelPass->setFont(font2);
+        labelPass->setFont(font1);
         layoutWidget = new QWidget(SignIn);
         layoutWidget->setObjectName("layoutWidget");
         layoutWidget->setGeometry(QRect(80, 183, 301, 91));
@@ -77,9 +73,6 @@ public:
 
         verticalLayout->addWidget(sPassword);
 
-        forgotPassword = new QPushButton(SignIn);
-        forgotPassword->setObjectName("forgotPassword");
-        forgotPassword->setGeometry(QRect(230, 290, 181, 41));
 
         retranslateUi(SignIn);
 
@@ -94,7 +87,6 @@ public:
         labelPass->setText(QString());
         sUsername->setText(QString());
         sPassword->setText(QString());
-        forgotPassword->setText(QCoreApplication::translate("SignIn", "Forgot Password?", nullptr));
     } // retranslateUi
 
 };

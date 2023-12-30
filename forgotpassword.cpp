@@ -18,8 +18,9 @@ forgotPassword::forgotPassword(QWidget *parent)
     QString fontPath = ":/Merriweather-Regular.ttf";
     int fontId = QFontDatabase::addApplicationFont(fontPath);
     QString fontName = QFontDatabase::applicationFontFamilies(fontId).at(0);
-    ui->label->setFont(QFont(fontName, 20));
+    ui->label->setFont(QFont(fontName, 24));
     ui->label->setText("Forgot Your Password?");
+    ui->label->setStyleSheet("color:rgba(153, 153, 153, 1)");
 
     ui->fUsername->setPlaceholderText("Enter Username");
     ui->fEmail->setPlaceholderText("Enter Email");
@@ -108,6 +109,11 @@ void forgotPassword::on_submitNewPass_clicked()
 
         if (updateQuery.exec()) {
             QMessageBox::information(this, "Password Reset Successful", "Your password has been successfully reset!");
+            ui->fUsername->clear();
+            ui->fEmail->clear();
+            ui->newPass->clear();
+            ui->rNewPass->clear();
+
         } else {
             qDebug() << "Update query error: " << updateQuery.lastError().text();
             QMessageBox::critical(this, "Error", "Failed to reset password. Please try again.");

@@ -119,11 +119,12 @@ void MainWindow::on_onSubmit_clicked()
 
 
         if (uLength < 2) {
-            QMessageBox::information(this, "Invalid Username!", "Username can't be less than 2 characters");
+            QMessageBox::information(this, "Invalid Input", "Username and Email cannot be empty");
+            return;
         }
-        if (!query.exec("SELECT * FROM userData")) {
+            if (!query.exec("SELECT * FROM userData")) {
             qDebug() << "Query error: " << query.lastError().text();
-        }
+            }
         while(query.next()){
             if(tUsername == query.value("Username"))
             {
@@ -158,6 +159,10 @@ void MainWindow::on_onSubmit_clicked()
             }
 
             QMessageBox::information(this, "Account creation", "Account created succesfully!");
+            ui->getUsername->clear();
+            ui->getEmail->clear();
+            ui->getPass->clear();
+            ui->getRePass->clear();
         }
         else
         {

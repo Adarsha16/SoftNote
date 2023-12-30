@@ -47,7 +47,7 @@ SignIn::SignIn(QWidget *parent) :
                           "}";
 
     ui->signIn->setStyleSheet(buttonStyle);
-    ui->forgotPassword->setStyleSheet(buttonStyle);
+    //ui->forgotPassword->setStyleSheet(buttonStyle);
 
     User_data.setDatabaseName("User_data.db");
     User_data.setConnectOptions("ConnectOptions=QSQLITE_OPEN_URI");

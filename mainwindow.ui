@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgba(153, 153, 153, 1)</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>You can make anything by writing</string>
