@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	"C:\\Users\\LENOVO\\Downloads\\SoftNote-someChanges\\SoftNote-someChanges\\penIcon.ico"
+IDI_ICON1	ICON	"C:\\Users\\LENOVO\\Documents\\SignUp\\SoftNote\\penIcon.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0
